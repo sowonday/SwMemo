@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		15EF2A5425C6EE2100B56B48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EF2A5325C6EE2100B56B48 /* AppDelegate.swift */; };
 		15EF2A5625C6EE2100B56B48 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EF2A5525C6EE2100B56B48 /* SceneDelegate.swift */; };
-		15EF2A5825C6EE2100B56B48 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EF2A5725C6EE2100B56B48 /* ViewController.swift */; };
 		15EF2A5B25C6EE2100B56B48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15EF2A5925C6EE2100B56B48 /* Main.storyboard */; };
 		15EF2A5E25C6EE2100B56B48 /* SwMemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 15EF2A5C25C6EE2100B56B48 /* SwMemo.xcdatamodeld */; };
 		15EF2A6025C6EE2100B56B48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15EF2A5F25C6EE2100B56B48 /* Assets.xcassets */; };
@@ -20,7 +19,6 @@
 		15EF2A5025C6EE2100B56B48 /* SwMemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwMemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15EF2A5325C6EE2100B56B48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15EF2A5525C6EE2100B56B48 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		15EF2A5725C6EE2100B56B48 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		15EF2A5A25C6EE2100B56B48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		15EF2A5D25C6EE2100B56B48 /* SwMemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SwMemo.xcdatamodel; sourceTree = "<group>"; };
 		15EF2A5F25C6EE2100B56B48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -60,7 +58,6 @@
 			children = (
 				15EF2A5325C6EE2100B56B48 /* AppDelegate.swift */,
 				15EF2A5525C6EE2100B56B48 /* SceneDelegate.swift */,
-				15EF2A5725C6EE2100B56B48 /* ViewController.swift */,
 				15EF2A5925C6EE2100B56B48 /* Main.storyboard */,
 				15EF2A5F25C6EE2100B56B48 /* Assets.xcassets */,
 				15EF2A6125C6EE2100B56B48 /* LaunchScreen.storyboard */,
@@ -140,7 +137,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15EF2A5825C6EE2100B56B48 /* ViewController.swift in Sources */,
 				15EF2A5425C6EE2100B56B48 /* AppDelegate.swift in Sources */,
 				15EF2A5625C6EE2100B56B48 /* SceneDelegate.swift in Sources */,
 				15EF2A5E25C6EE2100B56B48 /* SwMemo.xcdatamodeld in Sources */,
