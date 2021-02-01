@@ -10,6 +10,7 @@
 		15358BB325C7E56F00964365 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15358BB225C7E56F00964365 /* Model.swift */; };
 		15358BB725C7E85900964365 /* MemoListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15358BB625C7E85900964365 /* MemoListTableViewController.swift */; };
 		15358BBA25C7F12800964365 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15358BB925C7F12800964365 /* ComposeViewController.swift */; };
+		15358BBD25C7F51100964365 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15358BBC25C7F51100964365 /* UIViewController+Alert.swift */; };
 		15EF2A5425C6EE2100B56B48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EF2A5325C6EE2100B56B48 /* AppDelegate.swift */; };
 		15EF2A5625C6EE2100B56B48 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EF2A5525C6EE2100B56B48 /* SceneDelegate.swift */; };
 		15EF2A5B25C6EE2100B56B48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15EF2A5925C6EE2100B56B48 /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 		15358BB225C7E56F00964365 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		15358BB625C7E85900964365 /* MemoListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListTableViewController.swift; sourceTree = "<group>"; };
 		15358BB925C7F12800964365 /* ComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
+		15358BBC25C7F51100964365 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		15EF2A5025C6EE2100B56B48 /* SwMemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwMemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15EF2A5325C6EE2100B56B48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15EF2A5525C6EE2100B56B48 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				15EF2A5C25C6EE2100B56B48 /* SwMemo.xcdatamodeld */,
 				15358BB625C7E85900964365 /* MemoListTableViewController.swift */,
 				15358BB925C7F12800964365 /* ComposeViewController.swift */,
+				15358BBC25C7F51100964365 /* UIViewController+Alert.swift */,
 			);
 			path = SwMemo;
 			sourceTree = "<group>";
@@ -160,6 +163,7 @@
 				15358BBA25C7F12800964365 /* ComposeViewController.swift in Sources */,
 				15EF2A5E25C6EE2100B56B48 /* SwMemo.xcdatamodeld in Sources */,
 				15358BB325C7E56F00964365 /* Model.swift in Sources */,
+				15358BBD25C7F51100964365 /* UIViewController+Alert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
