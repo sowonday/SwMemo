@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		15358BB325C7E56F00964365 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15358BB225C7E56F00964365 /* Model.swift */; };
+		15358BB725C7E85900964365 /* MemoListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15358BB625C7E85900964365 /* MemoListTableViewController.swift */; };
 		15EF2A5425C6EE2100B56B48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EF2A5325C6EE2100B56B48 /* AppDelegate.swift */; };
 		15EF2A5625C6EE2100B56B48 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EF2A5525C6EE2100B56B48 /* SceneDelegate.swift */; };
 		15EF2A5B25C6EE2100B56B48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15EF2A5925C6EE2100B56B48 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		15358BB225C7E56F00964365 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		15358BB625C7E85900964365 /* MemoListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListTableViewController.swift; sourceTree = "<group>"; };
 		15EF2A5025C6EE2100B56B48 /* SwMemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwMemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15EF2A5325C6EE2100B56B48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15EF2A5525C6EE2100B56B48 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				15EF2A6125C6EE2100B56B48 /* LaunchScreen.storyboard */,
 				15EF2A6425C6EE2100B56B48 /* Info.plist */,
 				15EF2A5C25C6EE2100B56B48 /* SwMemo.xcdatamodeld */,
+				15358BB625C7E85900964365 /* MemoListTableViewController.swift */,
 			);
 			path = SwMemo;
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 			files = (
 				15EF2A5425C6EE2100B56B48 /* AppDelegate.swift in Sources */,
 				15EF2A5625C6EE2100B56B48 /* SceneDelegate.swift in Sources */,
+				15358BB725C7E85900964365 /* MemoListTableViewController.swift in Sources */,
 				15EF2A5E25C6EE2100B56B48 /* SwMemo.xcdatamodeld in Sources */,
 				15358BB325C7E56F00964365 /* Model.swift in Sources */,
 			);
