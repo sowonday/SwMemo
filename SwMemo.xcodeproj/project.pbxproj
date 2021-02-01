@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15358BB325C7E56F00964365 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15358BB225C7E56F00964365 /* Model.swift */; };
 		15EF2A5425C6EE2100B56B48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EF2A5325C6EE2100B56B48 /* AppDelegate.swift */; };
 		15EF2A5625C6EE2100B56B48 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EF2A5525C6EE2100B56B48 /* SceneDelegate.swift */; };
 		15EF2A5B25C6EE2100B56B48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15EF2A5925C6EE2100B56B48 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		15358BB225C7E56F00964365 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		15EF2A5025C6EE2100B56B48 /* SwMemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwMemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15EF2A5325C6EE2100B56B48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15EF2A5525C6EE2100B56B48 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +39,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		15358BB125C7E53C00964365 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				15358BB225C7E56F00964365 /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		15EF2A4725C6EE2100B56B48 = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +66,7 @@
 		15EF2A5225C6EE2100B56B48 /* SwMemo */ = {
 			isa = PBXGroup;
 			children = (
+				15358BB125C7E53C00964365 /* Model */,
 				15EF2A5325C6EE2100B56B48 /* AppDelegate.swift */,
 				15EF2A5525C6EE2100B56B48 /* SceneDelegate.swift */,
 				15EF2A5925C6EE2100B56B48 /* Main.storyboard */,
@@ -140,6 +151,7 @@
 				15EF2A5425C6EE2100B56B48 /* AppDelegate.swift in Sources */,
 				15EF2A5625C6EE2100B56B48 /* SceneDelegate.swift in Sources */,
 				15EF2A5E25C6EE2100B56B48 /* SwMemo.xcdatamodeld in Sources */,
+				15358BB325C7E56F00964365 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
