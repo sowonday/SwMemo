@@ -4,18 +4,11 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwMemo" customModuleProvider="target" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="45" y="65"/>
-        </scene>
         <!--SwMemo-->
         <scene sceneID="DZN-T5-C5o">
             <objects>
@@ -56,12 +49,51 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="SwMemo" id="Ow1-aW-yj6">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="qOs-d2-U5X"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="qOs-d2-U5X">
+                            <connections>
+                                <segue destination="yav-5n-i4d" kind="presentation" id="ixj-nG-ZjP"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lKd-M7-kgz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-287" y="-608"/>
+            <point key="canvasLocation" x="-196" y="11"/>
+        </scene>
+        <!--새 메모-->
+        <scene sceneID="Mtj-38-Vbf">
+            <objects>
+                <viewController id="vVZ-U4-CMC" customClass="ComposeViewController" customModule="SwMemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QsB-Nw-8qe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="51L-MF-PAH">
+                                <rect key="frame" x="0.0" y="56" width="414" height="786"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kVH-cV-17h"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="51L-MF-PAH" secondAttribute="bottom" id="ElO-5i-ixW"/>
+                            <constraint firstItem="51L-MF-PAH" firstAttribute="top" secondItem="kVH-cV-17h" secondAttribute="top" id="YVp-A1-O1C"/>
+                            <constraint firstItem="51L-MF-PAH" firstAttribute="leading" secondItem="kVH-cV-17h" secondAttribute="leading" id="aWr-nm-PGI"/>
+                            <constraint firstItem="51L-MF-PAH" firstAttribute="trailing" secondItem="kVH-cV-17h" secondAttribute="trailing" id="jKF-SP-R3H"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="새 메모" id="V2m-7m-Y6j">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="tTi-aH-XmY"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="cnO-zf-fsf"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VTA-go-ctI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1308.6956521739132" y="-638.16964285714278"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yLz-G8-xW8">
@@ -79,8 +111,29 @@
             </objects>
             <point key="canvasLocation" x="-955" y="12"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="AZO-L9-jTx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yav-5n-i4d" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Lbt-s6-6Ik">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vVZ-U4-CMC" kind="relationship" relationship="rootViewController" id="pkf-dq-V8t"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="99H-n2-zY5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="398.55072463768118" y="-638.16964285714278"/>
+        </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
