@@ -151,25 +151,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BgT-QS-8X9">
-                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
-                                <items>
-                                    <barButtonItem systemItem="trash" id="5nm-PV-PFK">
-                                        <color key="tintColor" systemColor="systemRedColor"/>
-                                        <connections>
-                                            <action selector="deleteMemo:" destination="10n-7c-0bB" id="cax-4D-hF9"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="TAb-9D-dop"/>
-                                    <barButtonItem systemItem="compose" id="nug-CF-vpl">
-                                        <connections>
-                                            <segue destination="yav-5n-i4d" kind="presentation" id="fvl-sl-Wws"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cum-rf-ICC">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="764"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="memoCell" textLabel="Dyg-Ah-tAA" style="IBUITableViewCellStyleDefault" id="1o9-UY-jTv">
@@ -211,6 +194,29 @@
                                     <outlet property="dataSource" destination="10n-7c-0bB" id="86Y-pL-Da7"/>
                                 </connections>
                             </tableView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BgT-QS-8X9">
+                                <rect key="frame" x="0.0" y="764" width="414" height="49"/>
+                                <items>
+                                    <barButtonItem systemItem="trash" id="5nm-PV-PFK">
+                                        <color key="tintColor" systemColor="systemRedColor"/>
+                                        <connections>
+                                            <action selector="deleteMemo:" destination="10n-7c-0bB" id="cax-4D-hF9"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="TAb-9D-dop"/>
+                                    <barButtonItem systemItem="compose" id="nug-CF-vpl">
+                                        <connections>
+                                            <segue destination="yav-5n-i4d" kind="presentation" id="fvl-sl-Wws"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="ToS-Uq-qFI"/>
+                                    <barButtonItem systemItem="action" id="ppb-K0-Fi0">
+                                        <connections>
+                                            <action selector="share:" destination="10n-7c-0bB" id="aai-fr-dSl"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Bwz-rV-UQB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -224,7 +230,9 @@
                             <constraint firstItem="cum-rf-ICC" firstAttribute="top" secondItem="7da-bb-u2b" secondAttribute="top" id="zam-s1-6V7"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="BC4-vD-Bvf"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="memoTableView" destination="cum-rf-ICC" id="7Mu-EZ-Qcp"/>
                     </connections>
@@ -235,7 +243,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ixj-nG-ZjP"/>
+        <segue reference="fvl-sl-Wws"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="labelColor">
