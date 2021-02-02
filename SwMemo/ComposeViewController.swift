@@ -47,6 +47,17 @@ class ComposeViewController: UIViewController {
     
     }
     
+    var willShowToken: NSObjectProtocol?
+    var willHideToken: NSObjectProtocol?
+    
+    deinit {
+        if let token = willShowToken{
+            NotificationCenter.default.removeObserver(token)
+        }
+        if let token = willHideToken{
+            NotificationCenter.default.removeObserver(token)
+        }
+    }
     
     
     
@@ -64,11 +75,49 @@ class ComposeViewController: UIViewController {
         }
         
         memoTextView.delegate = self
+        
+        willShowToken = NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillShowNotification, object: nil, queue: OperationQueue.main, using: {[weak self] (noti) in
+            guard let strongSelf = self else {return}
+            
+            if let frame = noti.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as?
+                NSValue{
+                let height = frame.cgRectValue.height
+                
+                var inset = strongSelf.memoTextView.contentInset
+                inset.bottom = height
+                strongSelf.memoTextView.contentInset = inset
+                
+                inset = strongSelf.memoTextView.scrollIndicatorInsets
+                inset.bottom = height
+                strongSelf.memoTextView.scrollIndicatorInsets = inset
+            }
+        })
+        
+        willHideToken = NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillHideNotification, object: nil, queue: OperationQueue.main, using: {[weak self] (noti) in
+            guard let strongSelf = self else {return}
+            
+            var inset = strongSelf.memoTextView.contentInset
+            inset.bottom = 0
+            strongSelf.memoTextView.contentInset = inset
+            
+            inset = strongSelf.memoTextView.scrollIndicatorInsets
+            inset.bottom = 0
+            strongSelf.memoTextView.scrollIndicatorInsets = inset
+            
+        })
+                                                    
+                                                               
+                                                               
+                                                               
+        
+        
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        memoTextView.becomeFirstResponder()
         navigationController?.presentationController?.delegate = self
     }
     
@@ -76,6 +125,7 @@ class ComposeViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
+        memoTextView.resignFirstResponder()
         navigationController?.presentationController?.delegate = nil
     }
 
