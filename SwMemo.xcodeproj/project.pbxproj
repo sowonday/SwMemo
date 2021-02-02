@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1535401B25C93C3C00342E2C /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1535401A25C93C3C00342E2C /* DataManager.swift */; };
 		15358BB325C7E56F00964365 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15358BB225C7E56F00964365 /* Model.swift */; };
 		15358BB725C7E85900964365 /* MemoListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15358BB625C7E85900964365 /* MemoListTableViewController.swift */; };
 		15358BBA25C7F12800964365 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15358BB925C7F12800964365 /* ComposeViewController.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1535401A25C93C3C00342E2C /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		15358BB225C7E56F00964365 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		15358BB625C7E85900964365 /* MemoListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListTableViewController.swift; sourceTree = "<group>"; };
 		15358BB925C7F12800964365 /* ComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1535401925C93C1900342E2C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				1535401A25C93C3C00342E2C /* DataManager.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		15358BB125C7E53C00964365 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +84,7 @@
 		15EF2A5225C6EE2100B56B48 /* SwMemo */ = {
 			isa = PBXGroup;
 			children = (
+				1535401925C93C1900342E2C /* Data */,
 				15358BB125C7E53C00964365 /* Model */,
 				15EF2A5325C6EE2100B56B48 /* AppDelegate.swift */,
 				15EF2A5525C6EE2100B56B48 /* SceneDelegate.swift */,
@@ -167,6 +178,7 @@
 				15EF2A5E25C6EE2100B56B48 /* SwMemo.xcdatamodeld in Sources */,
 				15358BB325C7E56F00964365 /* Model.swift in Sources */,
 				15358BBD25C7F51100964365 /* UIViewController+Alert.swift in Sources */,
+				1535401B25C93C3C00342E2C /* DataManager.swift in Sources */,
 				15358BC025C7FF9600964365 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
