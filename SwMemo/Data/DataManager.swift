@@ -56,7 +56,7 @@ class DataManager{
         }
     }
     
-    
+
     // MARK: - Core Data stack
 
     lazy var persistentContainer: NSPersistentContainer = {

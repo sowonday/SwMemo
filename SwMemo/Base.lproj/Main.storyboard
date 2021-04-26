@@ -72,25 +72,30 @@
             <objects>
                 <viewController id="vVZ-U4-CMC" customClass="ComposeViewController" customModule="SwMemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QsB-Nw-8qe">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="51L-MF-PAH">
-                                <rect key="frame" x="0.0" y="56" width="414" height="786"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="49R-YQ-K3b">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="419"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mXu-4u-IRn">
+                                <rect key="frame" x="0.0" y="410" width="414" height="469"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kVH-cV-17h"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="51L-MF-PAH" secondAttribute="bottom" id="ElO-5i-ixW"/>
-                            <constraint firstItem="51L-MF-PAH" firstAttribute="top" secondItem="kVH-cV-17h" secondAttribute="top" id="YVp-A1-O1C"/>
-                            <constraint firstItem="51L-MF-PAH" firstAttribute="leading" secondItem="kVH-cV-17h" secondAttribute="leading" id="aWr-nm-PGI"/>
-                            <constraint firstItem="51L-MF-PAH" firstAttribute="trailing" secondItem="kVH-cV-17h" secondAttribute="trailing" id="jKF-SP-R3H"/>
+                            <constraint firstItem="mXu-4u-IRn" firstAttribute="leading" secondItem="kVH-cV-17h" secondAttribute="leading" id="1qa-Pu-UXh"/>
+                            <constraint firstItem="mXu-4u-IRn" firstAttribute="trailing" secondItem="kVH-cV-17h" secondAttribute="trailing" id="LfU-t0-8h6"/>
+                            <constraint firstItem="49R-YQ-K3b" firstAttribute="top" secondItem="QsB-Nw-8qe" secondAttribute="top" id="XIB-In-NI8"/>
+                            <constraint firstAttribute="bottom" secondItem="mXu-4u-IRn" secondAttribute="bottom" id="csm-Pd-qR4"/>
+                            <constraint firstItem="49R-YQ-K3b" firstAttribute="leading" secondItem="kVH-cV-17h" secondAttribute="leading" id="fBO-lf-4Ug"/>
+                            <constraint firstItem="49R-YQ-K3b" firstAttribute="trailing" secondItem="kVH-cV-17h" secondAttribute="trailing" id="h3F-C6-z4j"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="새 메모" id="V2m-7m-Y6j">
@@ -99,14 +104,22 @@
                                 <action selector="close:" destination="vVZ-U4-CMC" id="aLI-ur-I4J"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="cnO-zf-fsf">
-                            <connections>
-                                <action selector="save:" destination="vVZ-U4-CMC" id="aOT-nR-erb"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="save" id="cnO-zf-fsf">
+                                <connections>
+                                    <action selector="save:" destination="vVZ-U4-CMC" id="aOT-nR-erb"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="add" id="uml-Hg-mYQ">
+                                <connections>
+                                    <action selector="addimage:" destination="vVZ-U4-CMC" id="NcI-lp-UcO"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
-                        <outlet property="memoTextView" destination="51L-MF-PAH" id="w7u-Ox-EXu"/>
+                        <outlet property="memoTextView" destination="mXu-4u-IRn" id="iMk-g6-K9N"/>
+                        <outlet property="newimage" destination="49R-YQ-K3b" id="Mj1-iz-XG5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VTA-go-ctI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -132,10 +145,10 @@
         <!--Navigation Controller-->
         <scene sceneID="AZO-L9-jTx">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yav-5n-i4d" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="yav-5n-i4d" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Lbt-s6-6Ik">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -235,7 +248,6 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="BC4-vD-Bvf"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="memoTableView" destination="cum-rf-ICC" id="7Mu-EZ-Qcp"/>
@@ -247,11 +259,11 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ixj-nG-ZjP"/>
+        <segue reference="fvl-sl-Wws"/>
     </inferredMetricsTieBreakers>
     <resources>
         <namedColor name="MyLabelColor">
-            <color red="0.63378729184053206" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.63400000333786011" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

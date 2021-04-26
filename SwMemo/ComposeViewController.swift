@@ -17,9 +17,33 @@ class ComposeViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    
     @IBOutlet weak var memoTextView: UITextView!
     
-    @IBAction func save(_ sender: Any) {
+    
+    @IBAction func addimage(_ sender: Any) {// 새 메모에서 이미지 선택
+
+        let alert = UIAlertController(title: "사진", message: "사진을 선택해주세요.", preferredStyle: .actionSheet)
+        let action = UIAlertAction(title: "사진앨범", style: .default) { [weak self] (action) in
+            self.openLibrary()
+        }
+        let cancel = UIAlertAction(title: "삭제", style: .default, handler: nil)
+
+        alert.addAction(action)
+        alert.addAction(cancel)
+
+        present(alert, animated: true, completion: nil)
+
+
+
+    }
+    
+    @IBOutlet weak var newimage: UIImageView!
+    
+    
+    
+    @IBAction func save(_
+                            sender: Any) {
         
         guard let memo = memoTextView.text,
               memo.count > 0 else{
@@ -63,16 +87,16 @@ class ComposeViewController: UIViewController {
     
 
     override func viewDidLoad() {
-        super.viewDidLoad()
+            super.viewDidLoad()
 
-        if let memo = editTarget{
-            navigationItem.title = "메모편집"
-            memoTextView.text = memo.content
-            originalMemoContent = memo.content
-        }else{
-            navigationItem.title = "새 메모"
-            memoTextView.text = ""
-        }
+            if let memo = editTarget{
+                navigationItem.title = "메모편집"
+                memoTextView.text = memo.content
+                originalMemoContent = memo.content
+            }else{
+                navigationItem.title = "새 메모"
+                memoTextView.text = ""
+            }
         
         memoTextView.delegate = self
         
@@ -107,10 +131,6 @@ class ComposeViewController: UIViewController {
         })
                                                     
                                                                
-                                                               
-                                                               
-        
-        
         
     }
     

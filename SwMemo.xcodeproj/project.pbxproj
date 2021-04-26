@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15256DFB25EF8EE900EC2983 /* imageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15256DFA25EF8EE900EC2983 /* imageViewController.swift */; };
 		1535401B25C93C3C00342E2C /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1535401A25C93C3C00342E2C /* DataManager.swift */; };
 		15358BB325C7E56F00964365 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15358BB225C7E56F00964365 /* Model.swift */; };
 		15358BB725C7E85900964365 /* MemoListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15358BB625C7E85900964365 /* MemoListTableViewController.swift */; };
@@ -22,7 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		15256DFA25EF8EE900EC2983 /* imageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageViewController.swift; sourceTree = "<group>"; };
 		1535401A25C93C3C00342E2C /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		1535401E25C97FAE00342E2C /* SwMemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwMemo.entitlements; sourceTree = "<group>"; };
 		15358BB225C7E56F00964365 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		15358BB625C7E85900964365 /* MemoListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListTableViewController.swift; sourceTree = "<group>"; };
 		15358BB925C7F12800964365 /* ComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +87,7 @@
 		15EF2A5225C6EE2100B56B48 /* SwMemo */ = {
 			isa = PBXGroup;
 			children = (
+				1535401E25C97FAE00342E2C /* SwMemo.entitlements */,
 				1535401925C93C1900342E2C /* Data */,
 				15358BB125C7E53C00964365 /* Model */,
 				15EF2A5325C6EE2100B56B48 /* AppDelegate.swift */,
@@ -97,6 +101,7 @@
 				15358BB925C7F12800964365 /* ComposeViewController.swift */,
 				15358BBC25C7F51100964365 /* UIViewController+Alert.swift */,
 				15358BBF25C7FF9600964365 /* DetailViewController.swift */,
+				15256DFA25EF8EE900EC2983 /* imageViewController.swift */,
 			);
 			path = SwMemo;
 			sourceTree = "<group>";
@@ -179,6 +184,7 @@
 				15358BB325C7E56F00964365 /* Model.swift in Sources */,
 				15358BBD25C7F51100964365 /* UIViewController+Alert.swift in Sources */,
 				1535401B25C93C3C00342E2C /* DataManager.swift in Sources */,
+				15256DFB25EF8EE900EC2983 /* imageViewController.swift in Sources */,
 				15358BC025C7FF9600964365 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -326,6 +332,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SwMemo/SwMemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P8T3XB3B3S;
 				INFOPLIST_FILE = SwMemo/Info.plist;
@@ -336,6 +343,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = sowon.SwMemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -346,6 +354,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SwMemo/SwMemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P8T3XB3B3S;
 				INFOPLIST_FILE = SwMemo/Info.plist;
@@ -356,6 +365,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = sowon.SwMemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
